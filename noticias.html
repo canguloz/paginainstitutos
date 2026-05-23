@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Noticias y Eventos | IESTP Paiján</title>
+    <meta name="description" content="Mantente informado sobre las últimas noticias, eventos y novedades del IESTP Paiján. Convocatorias, convenios y actividades académicas.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/noticias.css">
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="global-header">
+    <div class="container global-header-container">
+        <a href="index.html" class="global-logo">
+            <img src="images/logo-blanco.png" alt="IESTP Paiján" class="global-logo-img" loading="eager">
+            <span class="global-logo-text">IESTP <strong>Paiján</strong></span>
+        </a>
+        
+        <button class="global-menu-toggle" id="menuToggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="global-nav-menu" id="navMenu">
+            <ul class="global-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="carreras.html">Carreras</a></li>
+                <li><a href="admision.html">Admisión</a></li>
+                <li><a href="instituto.html">Instituto</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ==================== HERO NOTICIAS ==================== -->
+    <section class="noticias-hero">
+        <div class="noticias-hero-bg"></div>
+        <div class="noticias-hero-overlay"></div>
+        <div class="container noticias-hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-text">📰 Mantente informado</span>
+            </div>
+            <h1>Noticias y <span class="global-highlight">Eventos</span></h1>
+            <p>Lo último de nuestra comunidad académica</p>
+        </div>
+    </section>
+
+    <!-- ==================== FILTROS ==================== -->
+    <section class="filtros">
+        <div class="container">
+            <div class="filtros-wrapper">
+                <button class="filtro-btn active" data-categoria="todas">Todas</button>
+                <button class="filtro-btn" data-categoria="eventos">🎉 Eventos</button>
+                <button class="filtro-btn" data-categoria="convenios">🤝 Convenios</button>
+                <button class="filtro-btn" data-categoria="academico">📚 Académico</button>
+                <button class="filtro-btn" data-categoria="logros">🏆 Logros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== LISTADO DE NOTICIAS ==================== -->
+    <section class="noticias-grid-section">
+        <div class="container">
+            <div class="noticias-grid" id="noticiasGrid">
+                <!-- Noticia 1 - Evento -->
+                <article class="noticia-card" data-categoria="eventos">
+                    <div class="noticia-imagen">
+                        <img src="images/noticia-puertas.jpg" alt="Jornada de Puertas Abiertas" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop'">
+                        <span class="noticia-categoria">Evento</span>
+                    </div>
+                    <div class="noticia-contenido">
+                        <div class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> 15 Marzo, 2026
+                            <span class="noticia-lectura"><i class="far fa-clock"></i> 3 min lectura</span>
+                        </div>
+                        <h3>Jornada de Puertas Abiertas 2026</h3>
+                        <p>El IESTP Paiján abre sus puertas a la comunidad para mostrar sus instalaciones, laboratorios y carreras técnicas. ¡Te esperamos con actividades prácticas y talleres demostrativos!</p>
+                        <div class="noticia-detalle">
+                            <p><strong>📍 Lugar:</strong> Campus IESTP Paiján</p>
+                            <p><strong>🕒 Horario:</strong> 9:00 am - 4:00 pm</p>
+                            <p><strong>🎯 Actividades:</strong> Talleres prácticos, demostraciones de laboratorio, charlas informativas y recorridos guiados.</p>
+                        </div>
+                        <button class="noticia-btn" onclick="verNoticiaCompleta(1)">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Noticia 2 - Convenio -->
+                <article class="noticia-card" data-categoria="convenios">
+                    <div class="noticia-imagen">
+                        <img src="images/noticia-convenio.jpg" alt="Convenio Clínica San Pablo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop'">
+                        <span class="noticia-categoria">Convenio</span>
+                    </div>
+                    <div class="noticia-contenido">
+                        <div class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> 01 Marzo, 2026
+                            <span class="noticia-lectura"><i class="far fa-clock"></i> 2 min lectura</span>
+                        </div>
+                        <h3>Nuevo convenio con Clínica San Pablo</h3>
+                        <p>El IESTP Paiján y la Clínica San Pablo firman un importante convenio de cooperación interinstitucional que beneficiará a estudiantes de Enfermería Técnica.</p>
+                        <div class="noticia-detalle">
+                            <p><strong>🤝 Beneficios:</strong> Prácticas profesionales en la clínica, pasantías y bolsa de trabajo exclusiva.</p>
+                            <p><strong>👩‍⚕️ Dirigido a:</strong> Estudiantes de Enfermería Técnica</p>
+                            <p><strong>📅 Inicio:</strong> Ciclo académico 2026</p>
+                        </div>
+                        <button class="noticia-btn" onclick="verNoticiaCompleta(2)">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Noticia 3 - Académico -->
+                <article class="noticia-card" data-categoria="academico">
+                    <div class="noticia-imagen">
+                        <img src="images/noticia-clases.jpg" alt="Inicio de clases" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=400&fit=crop'">
+                        <span class="noticia-categoria">Académico</span>
+                    </div>
+                    <div class="noticia-contenido">
+                        <div class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> 20 Febrero, 2026
+                            <span class="noticia-lectura"><i class="far fa-clock"></i> 2 min lectura</span>
+                        </div>
+                        <h3>Inician clases del ciclo académico 2026</h3>
+                        <p>Damos la bienvenida a nuestros nuevos y antiguos estudiantes. Comienza un nuevo ciclo lleno de aprendizajes y oportunidades profesionales.</p>
+                        <div class="noticia-detalle">
+                            <p><strong>📅 Fecha:</strong> 20 de Mayo de 2026</p>
+                            <p><strong>📍 Lugar:</strong> Campus IESTP Paiján</p>
+                            <p><strong>📌 Importante:</strong> Revisar el cronograma de actividades en la página web.</p>
+                        </div>
+                        <button class="noticia-btn" onclick="verNoticiaCompleta(3)">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Noticia 4 - Logro -->
+                <article class="noticia-card" data-categoria="logros">
+                    <div class="noticia-imagen">
+                        <img src="images/noticia-logro.jpg" alt="Certificación ISO" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop'">
+                        <span class="noticia-categoria">Logro</span>
+                    </div>
+                    <div class="noticia-contenido">
+                        <div class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> 10 Enero, 2026
+                            <span class="noticia-lectura"><i class="far fa-clock"></i> 3 min lectura</span>
+                        </div>
+                        <h3>IESTP Paiján obtiene certificación ISO 9001:2025</h3>
+                        <p>El instituto recibe la certificación internacional de calidad educativa, reafirmando su compromiso con la excelencia académica.</p>
+                        <div class="noticia-detalle">
+                            <p><strong>🏅 Certificación:</strong> ISO 9001:2025</p>
+                            <p><strong>📋 Alcance:</strong> Gestión de la calidad educativa</p>
+                            <p><strong>🌐 Vigencia:</strong> 3 años</p>
+                        </div>
+                        <button class="noticia-btn" onclick="verNoticiaCompleta(4)">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Noticia 5 - Evento -->
+                <article class="noticia-card" data-categoria="eventos">
+                    <div class="noticia-imagen">
+                        <img src="images/noticia-feria.jpg" alt="Feria de Carreras" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop'">
+                        <span class="noticia-categoria">Evento</span>
+                    </div>
+                    <div class="noticia-contenido">
+                        <div class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> 05 Diciembre, 2025
+                            <span class="noticia-lectura"><i class="far fa-clock"></i> 2 min lectura</span>
+                        </div>
+                        <h3>Feria de Carreras Técnicas 2025</h3>
+                        <p>Estudiantes de últimos ciclos presentaron sus proyectos de innovación tecnológica, agropecuaria y de salud ante empresarios de la región.</p>
+                        <div class="noticia-detalle">
+                            <p><strong>🏆 Proyectos destacados:</strong> Sistema de riego automatizado, aplicación de telemedicina, software de gestión académica.</p>
+                            <p><strong>👥 Participantes:</strong> 150 estudiantes expositores</p>
+                        </div>
+                        <button class="noticia-btn" onclick="verNoticiaCompleta(5)">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+
+                <!-- Noticia 6 - Convenio -->
+                <article class="noticia-card" data-categoria="convenios">
+                    <div class="noticia-imagen">
+                        <img src="images/noticia-agro.jpg" alt="Convenio con agroexportadoras" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop'">
+                        <span class="noticia-categoria">Convenio</span>
+                    </div>
+                    <div class="noticia-contenido">
+                        <div class="noticia-fecha">
+                            <i class="far fa-calendar-alt"></i> 20 Noviembre, 2025
+                            <span class="noticia-lectura"><i class="far fa-clock"></i> 2 min lectura</span>
+                        </div>
+                        <h3>Alianza con principales agroexportadoras</h3>
+                        <p>El IESTP Paiján establece alianzas estratégicas con empresas agroexportadoras para prácticas y bolsa de trabajo exclusiva.</p>
+                        <div class="noticia-detalle">
+                            <p><strong>🤝 Empresas aliadas:</strong> Camposol, Danper, Virú, Agroindustrial Laredo</p>
+                            <p><strong>🎯 Beneficios:</strong> Prácticas preprofesionales y oportunidades laborales</p>
+                        </div>
+                        <button class="noticia-btn" onclick="verNoticiaCompleta(6)">Leer más <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Botón ver más (inicialmente oculto, para paginación) -->
+            <div class="ver-mas-wrapper" id="verMasWrapper" style="display: none;">
+                <button class="ver-mas-btn" onclick="cargarMasNoticias()">
+                    Cargar más noticias <i class="fas fa-arrow-down"></i>
+                </button>
+            </div>
+
+            <!-- Mensaje cuando no hay resultados -->
+            <div class="no-resultados" id="noResultados" style="display: none;">
+                <i class="fas fa-newspaper"></i>
+                <h3>No se encontraron noticias</h3>
+                <p>Intenta con otra categoría o revisa más tarde.</p>
+                <button class="global-btn global-btn-primary" onclick="resetFiltros()">Ver todas las noticias</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NEWSLETTER ==================== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h2>Suscríbete a nuestro <span class="global-highlight">boletín informativo</span></h2>
+                    <p>Recibe las últimas noticias y eventos directamente en tu correo</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CALENDARIO DE EVENTOS ==================== -->
+    <section class="calendario-eventos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Próximos eventos</span>
+                <h2 class="global-section-title">Calendario de <span class="global-highlight">Eventos</span></h2>
+                <p class="global-section-subtitle">No te pierdas nuestras próximas actividades</p>
+            </div>
+            
+            <div class="eventos-grid">
+                <div class="evento-card">
+                    <div class="evento-fecha">
+                        <span class="dia">25</span>
+                        <span class="mes">ABR</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Taller: Emprendimiento Tecnológico</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Auditorio IESTP Paiján</p>
+                        <p><i class="fas fa-clock"></i> 10:00 am - 1:00 pm</p>
+                        <a href="#" class="evento-link">Más información →</a>
+                    </div>
+                </div>
+                <div class="evento-card">
+                    <div class="evento-fecha">
+                        <span class="dia">10</span>
+                        <span class="mes">MAY</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Ceremonia de Inauguración del Ciclo</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Campus IESTP Paiján</p>
+                        <p><i class="fas fa-clock"></i> 8:00 am</p>
+                        <a href="#" class="evento-link">Más información →</a>
+                    </div>
+                </div>
+                <div class="evento-card">
+                    <div class="evento-fecha">
+                        <span class="dia">05</span>
+                        <span class="mes">JUN</span>
+                    </div>
+                    <div class="evento-info">
+                        <h3>Feria de Proyectos de Innovación</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Polideportivo IESTP Paiján</p>
+                        <p><i class="fas fa-clock"></i> 9:00 am - 4:00 pm</p>
+                        <a href="#" class="evento-link">Más información →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="global-footer">
+    <div class="container">
+        <div class="global-footer-content">
+            <div class="global-footer-logo">
+                <img src="images/lo_negro.png" alt="Logo" class="global-footer-logo-img" loading="lazy">
+                <p>Formando profesionales para el futuro</p>
+                <div class="footer-contacto">
+                    <p><i class="fas fa-phone"></i> 919 490 297</p>
+                    <p><i class="fas fa-envelope"></i> admision@iestpaijan.edu.pe</p>
+                </div>
+            </div>
+            <div class="global-footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="carreras.html">Carreras</a></li>
+                    <li><a href="admision.html">Admisión</a></li>
+                    <li><a href="instituto.html">Instituto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                </ul>
+            </div>
+            <div class="global-footer-links">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#" onclick="abrirPDF('pdf/practica de campo 1-bigdata.pdf')">Calendario Académico</a></li>
+                    <li><a href="#" onclick="abrirPDF('pdf/reglamento.pdf')">Reglamento Interno</a></li>
+                </ul>
+            </div>
+            <div class="global-footer-social">
+    <h4>Síguenos</h4>
+    <div class="global-social-icons">
+        <!-- Facebook - Reemplaza con tu URL oficial -->
+        <a href="https://web.facebook.com/iestp.paijan.9?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Instagram - Reemplaza con tu URL oficial -->
+        <a href="https://www.instagram.com/iestppaijan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <div class="footer-whatsapp">
+        <a href="https://wa.me/51919490297" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+    </div>
+    </div>
+        </div>
+        <div class="global-footer-bottom">
+            <p>&copy; 2026 IESTP Paiján - Instituto de Educación Superior Tecnológico Público. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== MODAL NOTICIA COMPLETA ==================== -->
+<div id="noticiaModal" class="modal-noticia">
+    <div class="modal-noticia-content">
+        <div class="modal-noticia-header">
+            <h3 id="modalNoticiaTitulo">Título de la noticia</h3>
+            <span class="modal-noticia-close">&times;</span>
+        </div>
+        <div class="modal-noticia-body">
+            <div class="modal-noticia-imagen">
+                <img id="modalNoticiaImagen" src="" alt="Noticia">
+            </div>
+            <div class="modal-noticia-fecha" id="modalNoticiaFecha"></div>
+            <div class="modal-noticia-contenido" id="modalNoticiaContenido"></div>
+        </div>
+        <div class="modal-noticia-footer">
+            <button onclick="cerrarModalNoticia()" class="global-btn global-btn-outline">Cerrar</button>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== MODAL PDF ==================== -->
+<div id="globalPdfModal" class="global-modal">
+    <div class="global-modal-content">
+        <div class="global-modal-header">
+            <h3 id="modalPdfTitle">Documento PDF</h3>
+            <span class="global-modal-close">&times;</span>
+        </div>
+        <div class="global-modal-body">
+            <iframe id="globalPdfFrame" src="" width="100%" height="500px" title="Visor PDF"></iframe>
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a id="globalPdfDownloadLink" href="#" download class="global-btn-pdf global-btn-pdf-download">
+                    <i class="fas fa-download"></i> Descargar PDF
+                </a>
+                <button onclick="cerrarModalPDF()" class="global-btn-pdf" style="background: #6c757d;">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/noticias.js"></script>
+</body>
+</html>

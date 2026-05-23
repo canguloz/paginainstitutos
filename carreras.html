@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Carreras Técnicas | IESTP Paiján</title>
+    <meta name="description" content="Carreras técnicas en Administración de Centros de Cómputo, Producción Agropecuaria y Enfermería Técnica. Formación práctica con alta demanda laboral.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/carreras.css">
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="global-header">
+    <div class="container global-header-container">
+        <a href="index.html" class="global-logo">
+            <img src="images/logo-blanco.png" alt="IESTP Paiján" class="global-logo-img" loading="eager">
+            <span class="global-logo-text">IESTP <strong>Paiján</strong></span>
+        </a>
+        
+        <button class="global-menu-toggle" id="menuToggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="global-nav-menu" id="navMenu">
+            <ul class="global-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="carreras.html">Carreras</a></li>
+                <li><a href="admision.html">Admisión</a></li>
+                <li><a href="instituto.html">Instituto</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ==================== HERO CARRERAS ==================== -->
+    <section class="carreras-hero">
+        <div class="carreras-hero-bg"></div>
+        <div class="carreras-hero-overlay"></div>
+        <div class="container carreras-hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-text">🎯 Elige tu camino</span>
+            </div>
+            <h1>Carreras <span class="global-highlight">Técnicas</span></h1>
+            <p>Formación especializada con alta demanda laboral y prácticas en entornos reales</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="stat-value">3 años</div>
+                    <div class="stat-label">Duración</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Título Oficial</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="stat-value">92%</div>
+                    <div class="stat-label">Empleabilidad</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Descubre las carreras</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== CARRERA 1: ADMINISTRACIÓN DE CENTROS DE CÓMPUTO ==================== -->
+    <section id="carrera-computo" class="carrera-card-expandida">
+        <div class="container">
+            <div class="carrera-wrapper">
+                <div class="carrera-contenido">
+                    <div class="carrera-icono">
+                        <i class="fas fa-computer"></i>
+                    </div>
+                    <span class="carrera-numero">01</span>
+                    <h2>Administración de <span class="global-highlight">Centros de Cómputo</span></h2>
+                    <p class="carrera-descripcion">Formamos especialistas en la gestión integral de infraestructura tecnológica, seguridad de datos y optimización de recursos informáticos para empresas de cualquier rubro.</p>
+                    
+                    <div class="carrera-detalles">
+                        <div class="detalle-item">
+                            <i class="fas fa-microchip"></i>
+                            <div>
+                                <strong>¿Qué aprenderás?</strong>
+                                <p>Gestión de servidores, administración de bases de datos, seguridad informática, redes empresariales y cloud computing.</p>
+                            </div>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>¿Dónde podrás trabajar?</strong>
+                                <p>Empresas públicas y privadas, bancos, aseguradoras, consultoras tecnológicas y como independiente.</p>
+                            </div>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-star-of-life"></i>
+                            <div>
+                                <strong>¿Qué te hace diferente?</strong>
+                                <p>Enfoque práctico desde el primer ciclo, laboratorios equipados y certificaciones internacionales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carrera-acciones">
+                        <a href="admision.html" class="global-btn global-btn-primary">
+                            <i class="fas fa-pen-alt"></i> Postular
+                        </a>
+                        <a href="pdf/malla-administracion.pdf" class="btn-malla" download>
+                            <i class="fas fa-download"></i> Descargar malla curricular
+                        </a>
+                        <button class="btn-malla" onclick="verPDF('pdf/malla-administracion.pdf', 'Malla - Administración de Centros de Cómputo')">
+                            <i class="fas fa-eye"></i> Ver malla
+                        </button>
+                    </div>
+                </div>
+                <div class="carrera-imagen">
+                    <img src="images/carrera-computo.jpg" alt="Administración de Centros de Cómputo" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=400&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CARRERA 2: PRODUCCIÓN AGROPECUARIA ==================== -->
+    <section id="carrera-agro" class="carrera-card-expandida alt">
+        <div class="container">
+            <div class="carrera-wrapper reverse">
+                <div class="carrera-imagen">
+                    <img src="images/carrera-agro.jpg" alt="Producción Agropecuaria" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&h=400&fit=crop'">
+                </div>
+                <div class="carrera-contenido">
+                    <div class="carrera-icono">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <span class="carrera-numero">02</span>
+                    <h2>Producción <span class="global-highlight">Agropecuaria</span></h2>
+                    <p class="carrera-descripcion">Preparamos técnicos capacitados para gestionar sistemas agrícolas y ganaderos sostenibles, aplicando tecnologías innovadoras y buenas prácticas.</p>
+                    
+                    <div class="carrera-detalles">
+                        <div class="detalle-item">
+                            <i class="fas fa-tractor"></i>
+                            <div>
+                                <strong>¿Qué aprenderás?</strong>
+                                <p>Manejo de cultivos, sanidad animal, riegos tecnificados, agroindustria y gestión de agronegocios.</p>
+                            </div>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <strong>¿Dónde podrás trabajar?</strong>
+                                <p>Empresas agroexportadoras, centros de investigación, proyectos de desarrollo rural y emprendimientos propios.</p>
+                            </div>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <strong>¿Qué te hace diferente?</strong>
+                                <p>Formación en agricultura sostenible, tecnología de precisión y acceso a campos experimentales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carrera-acciones">
+                        <a href="admision.html" class="global-btn global-btn-primary">
+                            <i class="fas fa-pen-alt"></i> Postular
+                        </a>
+                        <a href="pdf/Practica de campo 1-bigdata.pdf" class="btn-malla" download>
+                            <i class="fas fa-download"></i> Descargar malla curricular
+                        </a>
+                        <button class="btn-malla" onclick="verPDF('pdf/Practica de campo 1-bigdata.pdf', 'Malla - Producción Agropecuaria')">
+                            <i class="fas fa-eye"></i> Ver malla
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CARRERA 3: ENFERMERÍA TÉCNICA ==================== -->
+    <section id="carrera-enfermeria" class="carrera-card-expandida">
+        <div class="container">
+            <div class="carrera-wrapper">
+                <div class="carrera-contenido">
+                    <div class="carrera-icono">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <span class="carrera-numero">03</span>
+                    <h2>Enfermería <span class="global-highlight">Técnica</span></h2>
+                    <p class="carrera-descripcion">Formamos profesionales en atención asistencial básica, capaces de brindar cuidados integrales al paciente bajo supervisión profesional en diversos entornos de salud.</p>
+                    
+                    <div class="carrera-detalles">
+                        <div class="detalle-item">
+                            <i class="fas fa-stethoscope"></i>
+                            <div>
+                                <strong>¿Qué aprenderás?</strong>
+                                <p>Toma de signos vitales, administración de medicamentos, primeros auxilios, atención prehospitalaria y cuidados paliativos.</p>
+                            </div>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-hospital-user"></i>
+                            <div>
+                                <strong>¿Dónde podrás trabajar?</strong>
+                                <p>Hospitales, clínicas, centros de salud, postas médicas, atención domiciliaria y servicios de emergencia.</p>
+                            </div>
+                        </div>
+                        <div class="detalle-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <strong>¿Qué te hace diferente?</strong>
+                                <p>Laboratorio de simulación clínica, prácticas desde el segundo ciclo y enfoque en atención humanizada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carrera-acciones">
+                        <a href="admision.html" class="global-btn global-btn-primary">
+                            <i class="fas fa-pen-alt"></i> Postular
+                        </a>
+                        <a href="pdf/malla-enfermeria.pdf" class="btn-malla" download>
+                            <i class="fas fa-download"></i> Descargar malla curricular
+                        </a>
+                        <button class="btn-malla" onclick="verPDF('pdf/malla-enfermeria.pdf', 'Malla - Enfermería Técnica')">
+                            <i class="fas fa-eye"></i> Ver malla
+                        </button>
+                    </div>
+                </div>
+                <div class="carrera-imagen">
+                    <img src="images/carrera-enfermeria.jpg" alt="Enfermería Técnica" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=500&h=400&fit=crop'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== COMPARATIVA RÁPIDA ==================== -->
+    <section class="carreras-comparativa">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Comparativa</span>
+                <h2 class="global-section-title">Elige la carrera <span class="global-highlight">que más te apasiona</span></h2>
+                <p class="global-section-subtitle">Conoce las características de cada especialidad</p>
+            </div>
+            
+            <div class="comparativa-grid">
+                <div class="comparativa-card">
+                    <div class="comparativa-icon"><i class="fas fa-computer"></i></div>
+                    <h3>Administración de Centros de Cómputo</h3>
+                    <div class="comparativa-items">
+                        <div class="item"><span>Duración:</span> 3 años (6 ciclos)</div>
+                        <div class="item"><span>Modalidad:</span> Presencial</div>
+                        <div class="item"><span>Horario:</span> Lunes a Viernes</div>
+                        <div class="item"><span>Inversión:</span> Educación gratuita</div>
+                    </div>
+                    <a href="#carrera-computo" class="comparativa-link">Ver detalles →</a>
+                </div>
+                <div class="comparativa-card">
+                    <div class="comparativa-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Producción Agropecuaria</h3>
+                    <div class="comparativa-items">
+                        <div class="item"><span>Duración:</span> 3 años (6 ciclos)</div>
+                        <div class="item"><span>Modalidad:</span> Presencial</div>
+                        <div class="item"><span>Horario:</span> Lunes a Viernes</div>
+                        <div class="item"><span>Inversión:</span> Educación gratuita</div>
+                    </div>
+                    <a href="#carrera-agro" class="comparativa-link">Ver detalles →</a>
+                </div>
+                <div class="comparativa-card">
+                    <div class="comparativa-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Enfermería Técnica</h3>
+                    <div class="comparativa-items">
+                        <div class="item"><span>Duración:</span> 3 años (6 ciclos)</div>
+                        <div class="item"><span>Modalidad:</span> Presencial</div>
+                        <div class="item"><span>Horario:</span> Lunes a Viernes</div>
+                        <div class="item"><span>Inversión:</span> Educación gratuita</div>
+                    </div>
+                    <a href="#carrera-enfermeria" class="comparativa-link">Ver detalles →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="carreras-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para <span class="global-highlight">construir tu futuro</span> profesional?</h2>
+                <p>Inscríbete ahora y comienza tu camino al éxito</p>
+                <div class="cta-buttons">
+                    <a href="admision.html" class="global-btn global-btn-primary btn-large">
+                        <i class="fas fa-graduation-cap"></i> Postula ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="global-footer">
+    <div class="container">
+        <div class="global-footer-content">
+            <div class="global-footer-logo">
+                <img src="images/lo_negro.png" alt="Logo" class="global-footer-logo-img" loading="lazy">
+                <p>Formando profesionales para el futuro</p>
+                <div class="footer-contacto">
+                    <p><i class="fas fa-phone"></i> 919 490 297</p>
+                    <p><i class="fas fa-envelope"></i> admision@iestpaijan.edu.pe</p>
+                </div>
+            </div>
+            <div class="global-footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="carreras.html">Carreras</a></li>
+                    <li><a href="admision.html">Admisión</a></li>
+                    <li><a href="instituto.html">Instituto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                </ul>
+            </div>
+            <div class="global-footer-links">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#" onclick="abrirPDF('pdf/practica de campo 1-bigdata.pdf')">Calendario Académico</a></li>
+                    <li><a href="#" onclick="abrirPDF('pdf/reglamento.pdf')">Reglamento Interno</a></li>
+                </ul>
+            </div>
+            <div class="global-footer-social">
+    <h4>Síguenos</h4>
+    <div class="global-social-icons">
+        <!-- Facebook - Reemplaza con tu URL oficial -->
+        <a href="https://web.facebook.com/iestp.paijan.9?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Instagram - Reemplaza con tu URL oficial -->
+        <a href="https://www.instagram.com/iestppaijan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <div class="footer-whatsapp">
+        <a href="https://wa.me/51919490297" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+    </div>
+    </div>
+        </div>
+        <div class="global-footer-bottom">
+            <p>&copy; 2026 IESTP Paiján - Instituto de Educación Superior Tecnológico Público. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== MODAL PDF ==================== -->
+<div id="globalPdfModal" class="global-modal">
+    <div class="global-modal-content">
+        <div class="global-modal-header">
+            <h3 id="modalPdfTitle">Documento PDF</h3>
+            <span class="global-modal-close">&times;</span>
+        </div>
+        <div class="global-modal-body">
+            <iframe id="globalPdfFrame" src="" width="100%" height="500px" title="Visor PDF"></iframe>
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a id="globalPdfDownloadLink" href="#" download class="global-btn-pdf global-btn-pdf-download">
+                    <i class="fas fa-download"></i> Descargar PDF
+                </a>
+                <button onclick="cerrarModalPDF()" class="global-btn-pdf" style="background: #6c757d;">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/carreras.js"></script>
+</body>
+</html>

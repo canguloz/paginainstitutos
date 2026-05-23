@@ -1,0 +1,677 @@
+/* ========== RESET Y VARIABLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --global-primary: #0a3d62;
+    --global-primary-dark: #062c48;
+    --global-primary-light: #1e5a7d;
+    --global-secondary: #e67e22;
+    --global-secondary-dark: #c0392b;
+    --global-secondary-light: #f39c12;
+    --global-accent: #16a085;
+    --global-gray-light: #f8f9fa;
+    --global-gray: #6c757d;
+    --global-gray-dark: #2c3e50;
+    --global-white: #ffffff;
+    --global-black: #1a1a2e;
+    --global-shadow-sm: 0 2px 10px rgba(0,0,0,0.05);
+    --global-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --global-shadow-lg: 0 20px 40px rgba(0,0,0,0.15);
+    --global-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --global-radius: 1rem;
+    --global-radius-sm: 0.5rem;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--global-gray-dark);
+    overflow-x: hidden;
+    background: var(--global-white);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ========== TIPOGRAFÍA ========== */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.global-section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.global-section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--global-secondary);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.global-section-subtitle {
+    text-align: center;
+    color: var(--global-gray);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.global-highlight {
+    color: var(--global-secondary);
+    font-weight: 700;
+}
+
+/* ========== HEADER ========== */
+.global-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--global-shadow-sm);
+    z-index: 1000;
+    transition: var(--global-transition);
+}
+
+.global-header-scroll {
+    background: var(--global-white);
+    box-shadow: var(--global-shadow);
+}
+
+.global-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.global-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+}
+
+.global-logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.global-logo-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--global-primary);
+}
+
+.global-logo-text strong {
+    color: var(--global-secondary);
+}
+
+.global-nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.global-nav-list a {
+    text-decoration: none;
+    color: var(--global-gray-dark);
+    font-weight: 500;
+    transition: var(--global-transition);
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.global-nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--global-secondary);
+    transition: width 0.3s ease;
+}
+
+.global-nav-list a:hover::after,
+.global-nav-list a.active::after {
+    width: 100%;
+}
+
+.global-nav-list a:hover,
+.global-nav-list a.active {
+    color: var(--global-secondary);
+}
+
+.global-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--global-primary);
+}
+
+/* ========== BOTONES ========== */
+.global-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--global-transition);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.global-btn-primary {
+    background: var(--global-secondary);
+    color: var(--global-white);
+}
+
+.global-btn-primary:hover {
+    background: var(--global-secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230,126,34,0.3);
+}
+
+.global-btn-secondary {
+    background: var(--global-primary);
+    color: var(--global-white);
+}
+
+.global-btn-secondary:hover {
+    background: var(--global-primary-dark);
+    transform: translateY(-2px);
+}
+
+.global-btn-whatsapp {
+    background: #25D366;
+    color: var(--global-white);
+}
+
+.global-btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.global-btn-outline {
+    background: transparent;
+    border: 2px solid var(--global-secondary);
+    color: var(--global-secondary);
+}
+
+.global-btn-outline:hover {
+    background: var(--global-secondary);
+    color: var(--global-white);
+}
+
+/* ========== PAGE HEADER ========== */
+.global-page-header {
+    background: linear-gradient(135deg, var(--global-primary) 0%, var(--global-primary-dark) 100%);
+    color: var(--global-white);
+    padding: 8rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.global-page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/pattern.png') repeat;
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.global-page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.global-page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ========== FOOTER ACTUALIZADO - CENTRADO Y RESPONSIVE ========== */
+.global-footer {
+    background: var(--global-primary-dark);
+    color: var(--global-white);
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.global-footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Logo y descripción del footer */
+.global-footer-logo {
+    text-align: left;
+}
+
+.global-footer-logo-img {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.global-footer-logo h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.global-footer-logo p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+/* Enlaces del footer */
+.global-footer-links h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.global-footer-links h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--global-secondary);
+}
+
+.global-footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.global-footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.global-footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: var(--global-transition);
+    font-size: 0.85rem;
+}
+
+.global-footer-links a:hover {
+    color: var(--global-secondary);
+    transform: translateX(5px);
+    display: inline-block;
+}
+
+/* Redes sociales */
+.global-footer-social {
+    text-align: left;
+}
+
+.global-footer-social h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.global-footer-social h4::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--global-secondary);
+}
+
+.global-social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.global-social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: var(--global-white);
+    font-size: 1.2rem;
+    transition: var(--global-transition);
+}
+
+.global-social-icons a:hover {
+    background: var(--global-secondary);
+    transform: translateY(-3px);
+}
+
+/* Botón WhatsApp en footer */
+.footer-whatsapp {
+    margin-top: 0.5rem;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25D366;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--global-transition);
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.05);
+    background: #128C7E;
+}
+
+/* Footer bottom - copyright centrado */
+.global-footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Contacto en footer */
+.footer-contacto {
+    margin-top: 1rem;
+}
+
+.footer-contacto p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-contacto i {
+    width: 25px;
+    color: var(--global-secondary);
+}
+
+/* ========== MODAL PDF ========== */
+.global-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.global-modal-content {
+    background: var(--global-white);
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 1rem;
+    overflow: hidden;
+    animation: globalSlideIn 0.3s ease;
+}
+
+@keyframes globalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.global-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--global-primary);
+    color: var(--global-white);
+}
+
+.global-modal-close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: var(--global-transition);
+}
+
+.global-modal-close:hover {
+    color: var(--global-secondary);
+}
+
+.global-modal-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.global-btn-pdf {
+    padding: 0.75rem 1.5rem;
+    background: var(--global-primary);
+    color: var(--global-white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: var(--global-transition);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.global-btn-pdf:hover {
+    background: var(--global-primary-dark);
+    transform: translateY(-2px);
+}
+
+.global-btn-pdf-download {
+    background: var(--global-accent);
+}
+
+.global-btn-pdf-download:hover {
+    background: #0e6b58;
+}
+
+/* ========== UTILIDADES ========== */
+.global-text-center {
+    text-align: center;
+}
+
+.global-mt-4 {
+    margin-top: 2rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+    .global-footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .global-footer-logo {
+        text-align: center;
+    }
+    
+    .global-footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .global-footer-social {
+        text-align: center;
+    }
+    
+    .global-footer-social h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .global-social-icons {
+        justify-content: center;
+    }
+    
+    .footer-contacto p {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .global-menu-toggle {
+        display: block;
+    }
+    
+    .global-nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--global-white);
+        box-shadow: var(--global-shadow);
+        padding: 1rem 0;
+    }
+    
+    .global-nav-menu.active {
+        display: block;
+    }
+    
+    .global-nav-list {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .global-nav-list li {
+        text-align: center;
+    }
+    
+    .global-nav-list a {
+        display: block;
+        padding: 1rem;
+    }
+    
+    .global-page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .global-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .global-footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .global-footer-logo {
+        text-align: center;
+    }
+    
+    .global-footer-links {
+        text-align: center;
+    }
+    
+    .global-footer-links h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .global-footer-social {
+        text-align: center;
+    }
+    
+    .global-footer-social h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .global-social-icons {
+        justify-content: center;
+    }
+    
+    .footer-contacto p {
+        justify-content: center;
+    }
+    
+    .footer-whatsapp {
+        text-align: center;
+    }
+    
+    .whatsapp-btn {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .global-footer-content {
+        gap: 1.5rem;
+    }
+    
+    .global-footer-logo-img {
+        height: 50px;
+    }
+    
+    .global-social-icons a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .footer-contacto p {
+        font-size: 0.75rem;
+    }
+}

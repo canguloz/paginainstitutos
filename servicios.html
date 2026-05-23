@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Servicios | IESTP Paiján - Bienestar, Biblioteca, Bolsa de Trabajo y más</title>
+    <meta name="description" content="Servicios institucionales del IESTP Paiján: Biblioteca Virtual, Campus Virtual, Bienestar, Consultorio Psicológico, Bolsa de Trabajo y Servicio Tópico.">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/servicios.css">
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="global-header">
+    <div class="container global-header-container">
+        <a href="index.html" class="global-logo">
+            <img src="images/logo-blanco.png" alt="IESTP Paiján" class="global-logo-img" loading="eager">
+            <span class="global-logo-text">IESTP <strong>Paiján</strong></span>
+        </a>
+        
+        <button class="global-menu-toggle" id="menuToggle" aria-label="Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav class="global-nav-menu" id="navMenu">
+            <ul class="global-nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="carreras.html">Carreras</a></li>
+                <li><a href="admision.html">Admisión</a></li>
+                <li><a href="instituto.html">Instituto</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- ==================== HERO SERVICIOS ==================== -->
+    <section class="servicios-hero">
+        <div class="servicios-hero-bg"></div>
+        <div class="servicios-hero-overlay"></div>
+        <div class="container servicios-hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-text">🎯 Bienestar y desarrollo integral</span>
+            </div>
+            <h1>Servicios <span class="global-highlight">Institucionales</span></h1>
+            <p>Apoyo integral para tu formación profesional y bienestar personal</p>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Explora nuestros servicios</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== TARJETAS DE SERVICIOS ==================== -->
+    <section class="servicios-tarjetas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nuestra oferta</span>
+                <h2 class="global-section-title">Servicios para <span class="global-highlight">tu bienestar</span></h2>
+                <p class="global-section-subtitle">Conoce todos los beneficios que tenemos para ti</p>
+            </div>
+            
+            <div class="servicios-grid">
+                <!-- 1. Biblioteca Virtual - Enlace externo -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Biblioteca Virtual</h3>
+                    <p>Acceso a recursos digitales, libros electrónicos y bases de datos especializadas</p>
+                    <div class="card-footer">
+                        <a href="https://www.alphaeditorialcloud.com" target="_blank" class="btn-servicio">
+                            Acceder a Biblioteca <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Campus Virtual - Enlace externo -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Campus Virtual</h3>
+                    <p>Plataforma de aprendizaje en línea con cursos, recursos y actividades académicas</p>
+                    <div class="card-footer">
+                        <a href="https://campusvirtual.iestpaijan.edu.pe" target="_blank" class="btn-servicio">
+                            Ingresar al Campus <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Estudiantes y Egresados - Enlace externo -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Estudiantes y Egresados</h3>
+                    <p>Plataforma para Estudiantes y Egresados</p>
+                    <div class="card-footer">
+                        <a href="https://siitec.grell.gob.pe/authentication" target="_blank" class="btn-servicio">
+                            Ingresar a Estudiantes y Egresados <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Docentes - Enlace externo -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Docentes</h3>
+                    <p>Plataforma para Docentes</p>
+                    <div class="card-footer">
+                        <a href="https://siitec.grell.gob.pe/authentication" target="_blank" class="btn-servicio">
+                            Ingresar a Docentes <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Administradores- Enlace externo -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Administradores</h3>
+                    <p>Plataforma para Administradores</p>
+                    <div class="card-footer">
+                        <a href="https://siitec.grell.gob.pe/authentication" target="_blank" class="btn-servicio">
+                            Ingresar a Administradores <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Bienestar y Empleabilidad - Contenido interno -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Bienestar y Empleabilidad</h3>
+                    <p>Programas de desarrollo profesional, talleres y preparación para el mercado laboral</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-servicio" onclick="mostrarServicio('bienestar'); return false;">
+                            Ver más <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. Consultorio Psicológico - Contenido interno -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Consultorio Psicológico</h3>
+                    <p>Atención psicológica gratuita para estudiantes, orientación y apoyo emocional</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-servicio" onclick="mostrarServicio('psicologico'); return false;">
+                            Ver más <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. Bolsa de Trabajo e Inserción Laboral - Contenido interno -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Bolsa de Trabajo e Inserción Laboral</h3>
+                    <p>Conectamos a nuestros egresados con las mejores oportunidades laborales del sector</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-servicio" onclick="mostrarServicio('bolsa'); return false;">
+                            Ver más <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 9. Servicio Tópico - Contenido interno -->
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Servicio Tópico</h3>
+                    <p>Atención médica básica, primeros auxilios y cuidado de la salud de nuestros estudiantes</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-servicio" onclick="mostrarServicio('topico'); return false;">
+                            Ver más <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTENIDO DINÁMICO ==================== -->
+    <section class="servicios-contenido" id="contenidoDinamico">
+        <div class="container">
+            <!-- Bienestar y Empleabilidad -->
+            <div id="contenido-bienestar" class="servicio-contenido">
+                <div class="contenido-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h2>Bienestar y <span class="global-highlight">Empleabilidad</span></h2>
+                    <p>Te preparamos para el éxito profesional</p>
+                </div>
+                
+                <div class="contenido-grid">
+                    <div class="info-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Talleres de empleabilidad</h3>
+                        <p>Capacitación en elaboración de CV, preparación para entrevistas y desarrollo de habilidades blandas.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Feria de carreras</h3>
+                        <p>Eventos anuales con empresas reclutadoras para conectar a estudiantes con oportunidades laborales.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3>Asesoría profesional</h3>
+                        <p>Orientación vocacional y acompañamiento en la inserción al mercado laboral.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-chalkboard-user"></i>
+                        <h3>Programa de mentorías</h3>
+                        <p>Acompañamiento de profesionales y egresados destacados a estudiantes.</p>
+                    </div>
+                </div>
+                
+                <div class="cta-interno">
+                    <a href="contacto.html" class="btn-interno">Solicitar información <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Consultorio Psicológico -->
+            <div id="contenido-psicologico" class="servicio-contenido">
+                <div class="contenido-header">
+                    <i class="fas fa-brain"></i>
+                    <h2>Consultorio <span class="global-highlight">Psicológico</span></h2>
+                    <p>Atención gratuita y confidencial para estudiantes</p>
+                </div>
+                
+                <div class="contenido-grid">
+                    <div class="info-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Atención personalizada</h3>
+                        <p>Citas individuales con profesionales de la psicología.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Talleres grupales</h3>
+                        <p>Manejo del estrés, inteligencia emocional y habilidades sociales.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Línea de atención</h3>
+                        <p>Teléfono: 919 490 297 - Horario: 9am a 5pm</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Correo de contacto</h3>
+                        <p>psicologia@iestpaijan.edu.pe</p>
+                    </div>
+                </div>
+                
+                <div class="cta-interno">
+                    <a href="#" class="btn-interno" onclick="verPDF('pdf/atencion-psicologica.pdf')">Ver horarios de atención <i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+
+            <!-- Bolsa de Trabajo e Inserción Laboral (Actualizado) -->
+            <div id="contenido-bolsa" class="servicio-contenido">
+                <div class="contenido-header">
+                    <i class="fas fa-briefcase"></i>
+                    <h2>Bolsa de Trabajo e <span class="global-highlight">Inserción Laboral</span></h2>
+                    <p>Conectamos a nuestros egresados con las mejores oportunidades laborales del sector</p>
+                </div>
+                
+                <!-- Mensaje de bienvenida -->
+                <div class="bolsa-bienvenida">
+                    <div class="bienvenida-icono">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>¡Bienvenidos a nuestra Bolsa Laboral!</h3>
+                    <p>Los estudiantes y egresados podrán acceder a las oportunidades de trabajo que presentan las empresas a nivel nacional y así lograr ubicarse en un puesto de acuerdo a su profesión.</p>
+                </div>
+
+                <!-- Sistema de Inicio de Sesión / Registro -->
+                <div class="bolsa-sistema">
+                    <div class="sistema-tabs">
+                        <button class="tab-btn active" data-tab="login" onclick="cambiarTab('login')">🔐 Iniciar Sesión</button>
+                        <button class="tab-btn" data-tab="register" onclick="cambiarTab('register')">📝 Registrarse</button>
+                    </div>
+
+                    <!-- Formulario de Inicio de Sesión -->
+                    <div id="login-panel" class="sistema-panel active">
+                        <form id="loginForm" class="bolsa-form">
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                                <input type="email" id="loginEmail" placeholder="ejemplo@iestpaijan.edu.pe" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-lock"></i> Contraseña</label>
+                                <input type="password" id="loginPassword" placeholder="••••••••" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox"> Recordarme
+                                </label>
+                                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                            </div>
+                            <button type="submit" class="btn-bolsa">Iniciar Sesión <i class="fas fa-arrow-right"></i></button>
+                        </form>
+                        <div class="registro-link">
+                            <p>¿No tienes cuenta? <a href="#" onclick="cambiarTab('register')">Regístrate aquí</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Registro -->
+                    <div id="register-panel" class="sistema-panel">
+                        <form id="registerForm" class="bolsa-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-user"></i> Nombres</label>
+                                    <input type="text" id="regNombres" placeholder="Tus nombres" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-user"></i> Apellidos</label>
+                                    <input type="text" id="regApellidos" placeholder="Tus apellidos" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-id-card"></i> DNI</label>
+                                    <input type="text" id="regDni" placeholder="12345678" maxlength="8" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-phone"></i> Celular</label>
+                                    <input type="tel" id="regCelular" placeholder="999 888 777" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Correo electrónico</label>
+                                <input type="email" id="regEmail" placeholder="ejemplo@iestpaijan.edu.pe" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label><i class="fas fa-lock"></i> Contraseña</label>
+                                    <input type="password" id="regPassword" placeholder="••••••••" required>
+                                </div>
+                                <div class="form-group">
+                                    <label><i class="fas fa-lock"></i> Confirmar contraseña</label>
+                                    <input type="password" id="regConfirmPassword" placeholder="••••••••" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-graduation-cap"></i> Condición</label>
+                                <select id="regTipo" required>
+                                    <option value="">Selecciona tu condición</option>
+                                    <option value="estudiante">Estudiante</option>
+                                    <option value="egresado">Egresado</option>
+                                    <option value="docente">Docente</option>
+                                </select>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="terminos" required>
+                                <label for="terminos">Acepto los <a href="#" onclick="verPDF('pdf/terminos.pdf')">términos y condiciones</a></label>
+                            </div>
+                            <button type="submit" class="btn-bolsa">Registrarse <i class="fas fa-user-plus"></i></button>
+                        </form>
+                        <div class="registro-link">
+                            <p>¿Ya tienes cuenta? <a href="#" onclick="cambiarTab('login')">Inicia sesión aquí</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roles informativos -->
+                <div class="roles-info">
+                    <h4>¿Quiénes pueden acceder?</h4>
+                    <div class="roles-grid">
+                        <div class="rol-card">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>Estudiantes y egresados</span>
+                            <small>Acceso a ofertas laborales</small>
+                        </div>
+                        <div class="rol-card">
+                            <i class="fas fa-chalkboard-user"></i>
+                            <span>Docente</span>
+                            <small>Recomendación de estudiantes</small>
+                        </div>
+                        <div class="rol-card">
+                            <i class="fas fa-building"></i>
+                            <span>Administrador</span>
+                            <small>Gestión de ofertas y usuarios</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ofertas laborales destacadas -->
+                <div class="ofertas-destacadas">
+                    <h3><i class="fas fa-star"></i> Ofertas destacadas</h3>
+                    <div class="ofertas-grid">
+                        <div class="oferta-card">
+                            <div class="oferta-header">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="oferta-tipo">Tiempo completo</span>
+                            </div>
+                            <h4>Técnico en Soporte TI</h4>
+                            <p><i class="fas fa-building"></i> Empresa Tecnológica del Norte</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Trujillo - La Libertad</p>
+                            <button class="btn-oferta" onclick="mostrarNotificacion('Para postular, primero inicia sesión')">Postular <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="oferta-card">
+                            <div class="oferta-header">
+                                <i class="fas fa-seedling"></i>
+                                <span class="oferta-tipo">Prácticas</span>
+                            </div>
+                            <h4>Asistente de Producción Agropecuaria</h4>
+                            <p><i class="fas fa-building"></i> Agroindustrias Virú</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Virú - La Libertad</p>
+                            <button class="btn-oferta" onclick="mostrarNotificacion('Para postular, primero inicia sesión')">Postular <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                        <div class="oferta-card">
+                            <div class="oferta-header">
+                                <i class="fas fa-heartbeat"></i>
+                                <span class="oferta-tipo">Tiempo completo</span>
+                            </div>
+                            <h4>Técnico en Enfermería</h4>
+                            <p><i class="fas fa-building"></i> Clínica San Pablo</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Trujillo - La Libertad</p>
+                            <button class="btn-oferta" onclick="mostrarNotificacion('Para postular, primero inicia sesión')">Postular <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Empresas que confían -->
+                <div class="empresas-confian">
+                    <h3><i class="fas fa-handshake"></i> Empresas que confían en nosotros</h3>
+                    <div class="empresas-grid">
+                        <div class="empresa-item">🏢 Agroindustrial Laredo</div>
+                        <div class="empresa-item">🏢 Clínica San Pablo</div>
+                        <div class="empresa-item">🏢 Tecnológica del Norte</div>
+                        <div class="empresa-item">🏢 Camposol</div>
+                        <div class="empresa-item">🏢 Danper</div>
+                        <div class="empresa-item">🏢 Municipalidad de Paiján</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicio Tópico -->
+            <div id="contenido-topico" class="servicio-contenido">
+                <div class="contenido-header">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h2>Servicio <span class="global-highlight">Tópico</span></h2>
+                    <p>Atención médica básica para nuestra comunidad</p>
+                </div>
+                
+                <div class="contenido-grid">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horario de atención</h3>
+                        <p>Lunes a Viernes: 8:00 am - 4:00 pm</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Servicios ofrecidos</h3>
+                        <p>Primeros auxilios, control de signos vitales, curaciones y referencias médicas.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-location-dot"></i>
+                        <h3>Ubicación</h3>
+                        <p>Primer piso del edificio principal - Módulo de Bienestar</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3>Contacto</h3>
+                        <p>Central telefónica: 919 490 297 - Anexo 104</p>
+                    </div>
+                </div>
+                
+                <div class="cta-interno">
+                    <a href="#" class="btn-interno" onclick="verPDF('pdf/protocolo-salud.pdf')">Protocolo de salud <i class="fas fa-file-pdf"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="servicios-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Necesitas <span class="global-highlight">más información</span> sobre nuestros servicios?</h2>
+                <p>Estamos aquí para ayudarte</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/51919490297" class="global-btn global-btn-whatsapp btn-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:servicios@iestpaijan.edu.pe" class="global-btn global-btn-outline btn-large">
+                        <i class="fas fa-envelope"></i> Correo institucional
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="global-footer">
+    <div class="container">
+        <div class="global-footer-content">
+            <div class="global-footer-logo">
+                <img src="images/lo_negro.png" alt="Logo" class="global-footer-logo-img" loading="lazy">
+                <p>Formando profesionales para el futuro</p>
+                <div class="footer-contacto">
+                    <p><i class="fas fa-phone"></i> 919 490 297</p>
+                    <p><i class="fas fa-envelope"></i> admision@iestpaijan.edu.pe</p>
+                </div>
+            </div>
+            <div class="global-footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="carreras.html">Carreras</a></li>
+                    <li><a href="admision.html">Admisión</a></li>
+                    <li><a href="instituto.html">Instituto</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                </ul>
+            </div>
+            <div class="global-footer-links">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#" onclick="abrirPDF('pdf/practica de campo 1-bigdata.pdf')">Calendario Académico</a></li>
+                    <li><a href="#" onclick="abrirPDF('pdf/reglamento.pdf')">Reglamento Interno</a></li>
+                </ul>
+            </div>
+            <div class="global-footer-social">
+    <h4>Síguenos</h4>
+    <div class="global-social-icons">
+        <!-- Facebook - Reemplaza con tu URL oficial -->
+        <a href="https://web.facebook.com/iestp.paijan.9?_rdc=1&_rdr#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Instagram - Reemplaza con tu URL oficial -->
+        <a href="https://www.instagram.com/iestppaijan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    <div class="footer-whatsapp">
+        <a href="https://wa.me/51919490297" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+    </div>
+    </div>
+        </div>
+        <div class="global-footer-bottom">
+            <p>&copy; 2026 IESTP Paiján - Instituto de Educación Superior Tecnológico Público. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Modal PDF -->
+<div id="globalPdfModal" class="global-modal">
+    <div class="global-modal-content">
+        <div class="global-modal-header">
+            <h3 id="modalPdfTitle">Documento PDF</h3>
+            <span class="global-modal-close">&times;</span>
+        </div>
+        <div class="global-modal-body">
+            <iframe id="globalPdfFrame" src="" width="100%" height="500px" title="Visor PDF"></iframe>
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a id="globalPdfDownloadLink" href="#" download class="global-btn-pdf global-btn-pdf-download">
+                    <i class="fas fa-download"></i> Descargar PDF
+                </a>
+                <button onclick="cerrarModalPDF()" class="global-btn-pdf" style="background: #6c757d;">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/servicios.js"></script>
+</body>
+</html>

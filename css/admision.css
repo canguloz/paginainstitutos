@@ -1,0 +1,1452 @@
+/* ========== HERO ADMISIÓN - DISEÑO LLAMATIVO ========== */
+.admision-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a3d62 0%, #062c48 100%);
+    color: var(--global-white);
+    text-align: center;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 80px;
+}
+
+/* Fondo con imagen y efecto parallax */
+.admision-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/nosotros.jpg') center/cover no-repeat;
+    opacity: 0.85;
+    animation: slowZoom 25s ease infinite;
+}
+
+@keyframes slowZoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+/* Overlay degradado moderno */
+.admision-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, 
+        rgba(10,61,98,0.4) 0%, 
+        rgba(6,44,72,0.5) 50%,
+        rgba(10,61,98,0.4) 100%);
+}
+
+/* Patrón de puntos decorativo */
+.admision-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(230,126,34,0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Borde superior animado */
+.admision-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--global-secondary) 20%, 
+        var(--global-secondary-light) 50%, 
+        var(--global-secondary) 80%, 
+        transparent 100%);
+    animation: borderGlow 3s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Contenido principal */
+.admision-hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Badge con efecto neón */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(230,126,34,0.15);
+    backdrop-filter: blur(10px);
+    padding: 0.6rem 1.5rem;
+    border-radius: 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(230,126,34,0.4);
+    box-shadow: 0 0 20px rgba(230,126,34,0.2);
+    animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(230,126,34,0.2);
+        border-color: rgba(230,126,34,0.4);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(230,126,34,0.5);
+        border-color: rgba(230,126,34,0.8);
+    }
+}
+
+.hero-badge::before {
+    content: '🎓';
+    font-size: 1rem;
+}
+
+.hero-badge-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* Título principal con efecto de texto */
+.admision-hero h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    position: relative;
+    display: inline-block;
+}
+
+/* Línea decorativa debajo del título */
+.admision-hero h1::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--global-secondary), var(--global-secondary-light), var(--global-secondary), transparent);
+    border-radius: 2px;
+    animation: lineExpand 0.8s ease-out;
+}
+
+@keyframes lineExpand {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+.admision-hero .global-highlight {
+    position: relative;
+    display: inline-block;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(230,126,34,0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(230,126,34,0.6);
+    }
+}
+
+/* Descripción */
+.admision-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tarjetas de información flotantes */
+.hero-info {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 1.8rem;
+    border-radius: 3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    animation: floatItem 3s ease-in-out infinite;
+}
+
+.info-item:nth-child(1) { animation-delay: 0s; }
+.info-item:nth-child(2) { animation-delay: 0.5s; }
+.info-item:nth-child(3) { animation-delay: 1s; }
+
+@keyframes floatItem {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.info-item:hover {
+    background: rgba(230,126,34,0.3);
+    border-color: var(--global-secondary);
+    transform: translateY(-8px);
+}
+
+.info-item i {
+    color: var(--global-secondary);
+    font-size: 1.1rem;
+}
+
+/* Botones de acción */
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.btn-hero {
+    padding: 1rem 2.2rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-hero-primary {
+    background: linear-gradient(135deg, var(--global-secondary), var(--global-secondary-dark));
+    color: white;
+    box-shadow: 0 5px 20px rgba(230,126,34,0.4);
+}
+
+.btn-hero-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(230,126,34,0.6);
+}
+
+.btn-hero-outline {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+.btn-hero-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--global-secondary);
+    transform: translateY(-3px);
+}
+
+/* Efecto ripple en botones */
+.btn-hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-hero:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Indicador de scroll estilizado */
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+    padding: 0.6rem 1.2rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    animation: bounceIndicator 2s ease-in-out infinite;
+}
+
+@keyframes bounceIndicator {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(8px);
+    }
+}
+
+.hero-scroll-indicator:hover {
+    background: rgba(230,126,34,0.3);
+    border-color: var(--global-secondary);
+}
+
+.hero-scroll-indicator span {
+    display: block;
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.hero-scroll-indicator i {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Olas decorativas en la parte inferior */
+.hero-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 5;
+}
+
+.hero-waves svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+
+.hero-waves .wave-fill {
+    fill: rgba(255,255,255,0.05);
+}
+
+/* ========== PROCESO DE ADMISIÓN ========== */
+.proceso-admision {
+    padding: 5rem 0;
+    background: var(--global-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-tag {
+    display: inline-block;
+    background: rgba(230,126,34,0.1);
+    color: var(--global-secondary);
+    padding: 0.25rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.global-section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.global-section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--global-secondary);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.global-section-subtitle {
+    text-align: center;
+    color: var(--global-gray);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.pasos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.paso-card {
+    background: var(--global-white);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.paso-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--global-secondary);
+}
+
+.paso-numero {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--global-secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 10px rgba(230,126,34,0.3);
+}
+
+.paso-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--global-gray-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.paso-card:hover .paso-icon {
+    background: var(--global-secondary);
+}
+
+.paso-icon i {
+    font-size: 2rem;
+    color: var(--global-secondary);
+    transition: all 0.3s ease;
+}
+
+.paso-card:hover .paso-icon i {
+    color: var(--global-white);
+}
+
+.paso-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--global-primary);
+}
+
+.paso-card p {
+    color: var(--global-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.paso-detalle {
+    background: var(--global-gray-light);
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    color: var(--global-primary);
+    font-weight: 500;
+}
+
+/* ========== REQUISITOS ========== */
+.requisitos {
+    padding: 5rem 0;
+    background: var(--global-gray-light);
+}
+
+.requisitos-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.requisitos-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.requisitos-content > p {
+    color: var(--global-gray);
+    margin-bottom: 2rem;
+}
+
+.requisitos-lista {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.requisitos-lista li {
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.requisitos-lista li i {
+    color: var(--global-secondary);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+}
+
+.requisitos-lista li strong {
+    color: var(--global-primary);
+}
+
+.requisitos-nota {
+    background: rgba(230,126,34,0.1);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    border-left: 3px solid var(--global-secondary);
+}
+
+.requisitos-nota i {
+    color: var(--global-secondary);
+    font-size: 1.2rem;
+}
+
+.requisitos-nota p {
+    font-size: 0.85rem;
+    color: var(--global-gray-dark);
+    margin: 0;
+}
+
+.requisitos-imagen {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.requisitos-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.requisitos-imagen:hover img {
+    transform: scale(1.05);
+}
+
+/* ========== CRONOGRAMA ========== */
+.cronograma {
+    padding: 5rem 0;
+    background: var(--global-white);
+}
+
+.cronograma-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.cronograma-timeline::before {
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--global-secondary), var(--global-primary));
+    border-radius: 3px;
+}
+
+.cronograma-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.cronograma-fecha {
+    width: 100px;
+    text-align: center;
+    background: var(--global-primary);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(10,61,98,0.3);
+}
+
+.cronograma-fecha .dia {
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: block;
+    line-height: 1;
+}
+
+.cronograma-fecha .mes {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cronograma-content {
+    flex: 1;
+    background: var(--global-gray-light);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cronograma-content:hover {
+    transform: translateX(5px);
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.cronograma-content h3 {
+    color: var(--global-primary);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.cronograma-content p {
+    color: var(--global-gray);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+/* ========== CALENDARIO PDF ========== */
+.calendario-pdf {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--global-primary), var(--global-primary-dark));
+    color: var(--global-white);
+}
+
+.calendario-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.calendario-icono {
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.calendario-icono i {
+    font-size: 2.5rem;
+    color: var(--global-secondary);
+}
+
+.calendario-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.calendario-wrapper p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.pdf-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.pdf-preview:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.pdf-icon {
+    background: #e74c3c;
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.pdf-icon i {
+    font-size: 1.5rem;
+}
+
+.pdf-icon span {
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+.pdf-info {
+    flex: 1;
+    text-align: left;
+}
+
+.pdf-info strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.pdf-info small {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.pdf-view-icon {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.pdf-preview:hover .pdf-view-icon {
+    opacity: 1;
+    transform: translateX(3px);
+}
+
+.pdf-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-pdf {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.btn-pdf:hover {
+    background: var(--global-secondary);
+    transform: translateY(-2px);
+}
+
+.btn-pdf-download {
+    background: var(--global-secondary);
+}
+
+.btn-pdf-download:hover {
+    background: var(--global-secondary-dark);
+}
+
+/* ========== VACANTES ========== */
+.vacantes {
+    padding: 5rem 0;
+    background: var(--global-gray-light);
+}
+
+.vacantes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.vacante-card {
+    background: var(--global-white);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.vacante-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--global-secondary);
+}
+
+.vacante-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--global-gray-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.vacante-card:hover .vacante-icon {
+    background: var(--global-secondary);
+}
+
+.vacante-icon i {
+    font-size: 2rem;
+    color: var(--global-secondary);
+    transition: all 0.3s ease;
+}
+
+.vacante-card:hover .vacante-icon i {
+    color: var(--global-white);
+}
+
+.vacante-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--global-primary);
+}
+
+.vacante-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.vacante-cupos, .vacante-modalidad {
+    font-size: 0.8rem;
+    background: var(--global-gray-light);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2rem;
+}
+
+.vacante-cupos i, .vacante-modalidad i {
+    margin-right: 0.25rem;
+    color: var(--global-secondary);
+}
+
+.vacante-link {
+    display: inline-block;
+    color: var(--global-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.vacante-link:hover {
+    transform: translateX(5px);
+}
+
+/* ========== INFORMACIÓN IMPORTANTE ========== */
+.info-importante {
+    padding: 5rem 0;
+    background: var(--global-white);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    transition: all 0.4s ease;
+    background: var(--global-gray-light);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    background: var(--global-white);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: var(--global-secondary);
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--global-primary);
+}
+
+.info-card p {
+    font-size: 0.85rem;
+    color: var(--global-gray);
+    line-height: 1.5;
+}
+
+/* ========== PREINSCRIPCIÓN ========== */
+.preinscripcion {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--global-primary-dark), var(--global-primary));
+    color: var(--global-white);
+}
+
+.preinscripcion-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.preinscripcion-content .section-tag {
+    background: rgba(255,255,255,0.2);
+    color: var(--global-white);
+}
+
+.preinscripcion-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.preinscripcion-content > p {
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.preinscripcion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: span 2;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.9);
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(230,126,34,0.3);
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.form-check input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.form-check a {
+    color: var(--global-secondary);
+    text-decoration: none;
+}
+
+.form-check a:hover {
+    text-decoration: underline;
+}
+
+.btn-submit {
+    background: var(--global-secondary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-submit:hover {
+    background: var(--global-secondary-dark);
+    transform: translateY(-2px);
+}
+
+.preinscripcion-contacto {
+    background: rgba(0,0,0,0.2);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.contacto-directo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-directo > p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-whatsapp, .contacto-email {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contacto-whatsapp {
+    background: #25D366;
+    color: white;
+}
+
+.contacto-whatsapp:hover {
+    transform: scale(1.02);
+    background: #128C7E;
+}
+
+.contacto-email {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.contacto-email:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.02);
+}
+
+.contacto-horario {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    opacity: 0.7;
+    justify-content: center;
+}
+/* ========== MODAL DE TÉRMINOS Y CONDICIONES ========== */
+.modal-terminos {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-terminos-content {
+    background: white;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 1rem;
+    overflow: hidden;
+    animation: modalFadeIn 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-terminos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #0a3d62;
+    color: white;
+}
+
+.modal-terminos-header h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.modal-terminos-close {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-terminos-close:hover {
+    color: #e67e22;
+}
+
+.modal-terminos-body {
+    padding: 1.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-terminos-body h4 {
+    color: #0a3d62;
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+}
+
+.modal-terminos-body p {
+    color: #555;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.modal-fecha {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+    font-size: 0.75rem !important;
+    color: #888 !important;
+}
+
+.modal-terminos-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.btn-modal-terminos {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-modal-terminos:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* ========== CTA FINAL ========== */
+.admision-cta {
+    padding: 5rem 0;
+    background: var(--global-gray-light);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    margin-bottom: 2rem;
+    color: var(--global-gray);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px) {
+    .admision-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .admision-hero p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-info {
+        gap: 1rem;
+    }
+    
+    .info-item {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    .hero-buttons {
+        gap: 1rem;
+    }
+    
+    .btn-hero {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.9rem;
+    }
+    
+    .requisitos-wrapper,
+    .preinscripcion-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .cronograma-timeline::before {
+        left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admision-hero {
+        min-height: 90vh;
+        padding-top: 70px;
+    }
+    
+    .admision-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .admision-hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-info {
+        gap: 0.8rem;
+    }
+    
+    .info-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .btn-hero {
+        width: 80%;
+        justify-content: center;
+    }
+    
+    .hero-waves svg {
+        height: 40px;
+    }
+    
+    .global-section-title {
+        font-size: 1.8rem;
+    }
+    
+    .pasos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cronograma-timeline::before {
+        left: 70px;
+    }
+    
+    .cronograma-fecha {
+        width: 80px;
+    }
+    
+    .cronograma-fecha .dia {
+        font-size: 1.4rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full {
+        grid-column: span 1;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .vacantes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .admision-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-badge {
+        padding: 0.4rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-badge-text {
+        font-size: 0.7rem;
+    }
+    
+    .info-item {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-hero {
+        width: 100%;
+    }
+    
+    .cronograma-timeline::before {
+        display: none;
+    }
+    
+    .cronograma-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .cronograma-fecha {
+        margin-bottom: 0.5rem;
+    }
+    
+    .cronograma-content {
+        width: 100%;
+    }
+    
+    .pdf-preview {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pdf-info {
+        text-align: center;
+    }
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.paso-card, .requisitos-wrapper, .vacante-card, .info-card {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.paso-card:nth-child(1) { animation-delay: 0.1s; }
+.paso-card:nth-child(2) { animation-delay: 0.2s; }
+.paso-card:nth-child(3) { animation-delay: 0.3s; }
+.paso-card:nth-child(4) { animation-delay: 0.4s; }
