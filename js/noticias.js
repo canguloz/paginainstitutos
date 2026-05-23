@@ -130,15 +130,15 @@
             // Datos de las noticias (puedes expandir este objeto)
             const noticiasData = {
                 1: {
-                    titulo: 'Jornada de Puertas Abiertas 2026',
-                    fecha: '15 de Marzo, 2026',
-                    imagen: 'images/noticia-puertas.jpg',
+                    titulo: 'Jornada de Cachimbo 2026',
+                    fecha: '16 de Junio, 2026',
+                    imagen: 'images/eventos/cachimbo-2026.jpeg',
                     contenido: `
-                        <p>El IESTP Paiján abre sus puertas a la comunidad para mostrar sus instalaciones, laboratorios y carreras técnicas.</p>
+                        <p>El IESTP Paiján abre sus puertas a la comunidad estudiantil. ¡Te esperamos con actividades de reinado, colocación de distintivos, deportes!</p>
                         <p><strong>📍 Lugar:</strong> Campus IESTP Paiján</p>
-                        <p><strong>🕒 Horario:</strong> 9:00 am - 4:00 pm</p>
-                        <p><strong>🎯 Actividades:</strong> Talleres prácticos, demostraciones de laboratorio, charlas informativas y recorridos guiados.</p>
-                        <p>¡Te esperamos con actividades prácticas y talleres demostrativos! No faltes a esta experiencia única donde podrás conocer de cerca nuestra oferta educativa.</p>
+                        <p><strong>🕒 Horario:</strong> 4:00 pm - 8:00 pm</p>
+                        <p><strong>🎯 Actividades:</strong> Coronación Srta. Cachimbo 2026.</p>
+                        <p>¡Te esperamos con actividades de Deporte - Eliminatorias, Imposición de Distintivos, Deporte - Gran Final.! No faltes a esta experiencia única donde podrás conocer de cerca nuestra comunidad  educativa.</p>
                         <p>Para más información, contáctanos al 919 490 297 o escríbenos a admision@iestpaijan.edu.pe</p>
                     `
                 },
