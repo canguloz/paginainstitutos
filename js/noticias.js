@@ -138,7 +138,7 @@
                         <p><strong>📍 Lugar:</strong> Campus IESTP Paiján</p>
                         <p><strong>🕒 Horario:</strong> 4:00 pm - 8:00 pm</p>
                         <p><strong>🎯 Actividades:</strong> Coronación Srta. Cachimbo 2026.</p>
-                        <p>¡Te esperamos con actividades de Deporte - Eliminatorias, Imposición de Distintivos, Deporte - Gran Final.! No faltes a esta experiencia única donde podrás conocer de cerca nuestra comunidad  educativa.</p>
+                        <p>¡Te esperamos con actividades de Deporte - Eliminatorias, Imposición de Distintivos, Deporte - Gran Final.! No faltes a esta experiencia única donde podrás conocer de cerca nuestra comunidad educativa.</p>
                         <p>Para más información, contáctanos al 919 490 297 o escríbenos a admision@iestpaijan.edu.pe</p>
                     `
                 },
